@@ -1,9 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `deepsynth2`,
+    title: `DeepSynthBody Web Page`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-mdx", "gatsby-transformer-remark", 
+  plugins: ["gatsby-plugin-mdx", 
+  
+  "gatsby-transformer-remark", 
+  "gatsby-plugin-image", 
+  "gatsby-plugin-sharp",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

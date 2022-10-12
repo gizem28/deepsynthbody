@@ -1,23 +1,24 @@
 import * as React from "react"
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+// const pageStyles = {
+//   color: "#232129",
+//   padding: 96,
+//   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+// }
+// const headingStyles = {
+//   marginTop: 0,
+//   marginBottom: 64,
+//   maxWidth: 320,
+// }
 // const headingAccentStyles = {
 //   color: "#663399",
 // }
-const paragraphStyles = {
-  marginBottom: 48,
-}
+// const paragraphStyles = {
+//   marginBottom: 48,
+// }
 // const codeStyles = {
 //   color: "#8A6534",
 //   padding: 4,
@@ -129,6 +130,10 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
     <p>I'm making this by following the Gatsby Tutorial.</p>
+    <StaticImage
+        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+        src="https://thumbs.dreamstime.com/b/digital-ray-human-body-scan-background-interface-d-rendering-digital-ray-human-body-scan-interface-blue-background-d-108456163.jpg"
+      />
     </Layout>
     // <main style={pageStyles}>
     //   <h1 style={headingStyles}>
