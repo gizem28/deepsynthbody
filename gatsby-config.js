@@ -3,12 +3,14 @@ module.exports = {
     title: `deepsynth2`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-mdx", "gatsby-transformer-remark", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: ["gatsby-plugin-mdx", "gatsby-transformer-remark", 
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
     },
-    __key: "pages"
-  }]
+    `gatsby-transformer-remark`,
+  ],
 };
