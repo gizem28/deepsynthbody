@@ -2,17 +2,21 @@ import * as React from 'react'
 import {Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import {
+  container,
+  navLinkText,
+} from '../../components/layout.module.css'
 
 
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="Categories">
+    <Layout className={container} pageTitle="Data Models">
      {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>
             <h2>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
+              <Link className={navLinkText} to={`/blog/${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
               </Link>
             </h2>
@@ -41,6 +45,6 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <Seo title="My Blog Posts" />
+export const Head = () => <Seo title="Models" />
 
 export default BlogPage
