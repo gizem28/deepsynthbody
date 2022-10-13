@@ -130,7 +130,7 @@ import Seo from '../components/seo'
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-    <p>I'm making this by following the Gatsby Tutorial.</p>
+    <p>A novel framework to solve data deficiency problems caused by privacy issues and time-consuming and costly medical data annotation processes.</p>
     <StaticImage
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="https://thumbs.dreamstime.com/b/digital-ray-human-body-scan-background-interface-d-rendering-digital-ray-human-body-scan-interface-blue-background-d-108456163.jpg"
