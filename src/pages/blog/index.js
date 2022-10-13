@@ -20,6 +20,7 @@ const BlogPage = ({ data }) => {
                 {node.frontmatter.title}
               </Link>
             </h2>
+            <p>Category: {node.frontmatter.categories}</p>
             <p>Posted: {node.frontmatter.date}</p>
             <p>{node.excerpt}</p>
           </article>
@@ -37,6 +38,7 @@ export const query = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           slug
+          categories
         }
         id
         excerpt

@@ -1,6 +1,6 @@
 .container {
     margin: auto;
-    max-width: 500px;
+    max-width: 700px;
     font-family: sans-serif;
   }
   
@@ -11,14 +11,17 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+
   }
   .nav-link-item {
-    padding-right: 3rem;
+    padding-right: 9rem;
     font-size: large;
  
   }
   .nav-link-text {
     color: #0D96F2;
+    text-decoration: none;
+
   }
 
   /* ... your existing styles */
@@ -32,4 +35,10 @@
 
 p{
   font-size: larger;
+}
+
+hr{
+  height: 2px;
+  background-color: #0D96F2 !important;
+  max-width: 700px;
 }

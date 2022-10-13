@@ -4,11 +4,14 @@ import { graphql } from 'gatsby'
 import Seo from '../../components/seo'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
+
 const BlogPost = ({data, children}) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
+ 
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
+            <p>Category: {data.mdx.frontmatter.categories}</p>
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <GatsbyImage
         image={image}
@@ -34,6 +37,7 @@ export const query = graphql`
         hero_image_alt
         hero_image_credit_link
         hero_image_credit_text
+        categories
         hero_image {
           childImageSharp {
             gatsbyImageData

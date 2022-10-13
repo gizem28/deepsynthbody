@@ -21,8 +21,7 @@ const Layout = ({ pageTitle, children }) => {
   `)
   return (
     <div className={container}>
-        <br/>
-        <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+      <br/>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -36,12 +35,19 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
+          <Link to="/categorypage" className={navLinkText}>
+              Categories
+             </Link> 
+          </li>
+          <li className={navLinkItem}>
             <Link to="/blog" className={navLinkText}>
               Models
             </Link>
           </li>
         </ul>
+        <hr/>
       </nav>
+      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <main>
         <h1 className={heading}>{pageTitle}</h1>
         {children}
