@@ -3,18 +3,16 @@ module.exports = {
     title: `DeepSynthBody Web Page`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-mdx", 
-  
-  "gatsby-transformer-remark", 
+  plugins: ["gatsby-transformer-remark", 
   "gatsby-plugin-image", 
   "gatsby-plugin-sharp",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
+        name: `blog`,
+        path: `${__dirname}/blog/`,
       },
     },
-    `gatsby-transformer-remark`,
+    "gatsby-plugin-mdx",
   ],
 };
