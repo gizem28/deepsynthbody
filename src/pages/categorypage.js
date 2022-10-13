@@ -5,7 +5,8 @@ import Seo from "../components/seo";
 
 const CategoryPage = () => {
     return (
-      <Layout pageTitle="Home Page">
+      <Layout pageTitle="Categories">
+        <p>Generative modles are organized under 11 categories.</p>
         <br/>
         <CategoriesList/>
       </Layout>
