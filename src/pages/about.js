@@ -4,9 +4,9 @@ import Seo from "../components/seo";
 
 const AboutPage = () => {
   return (
-    <Layout pageTitle="About Deepsynthbody">
+    <Layout pageTitle="About Deeptest">
       <p>
-        Main objectives of Deepsynthbody is to,
+        Main objectives of deeptest is to,
         <ul>
           <li>
             overcome the privacy related limitations for medical data by
@@ -22,7 +22,7 @@ const AboutPage = () => {
             model for the human body.
           </li>
         </ul>
-        Additionaly, Deepsynthbody works as:
+        Additionaly, deeptest works as:
         <ul>
           <li>a repository for deep generative models used in medicine. </li>
           <li>
