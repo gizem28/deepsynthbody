@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `DeepSynthBody Web Page`,
+    title: `Test Web Page`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-transformer-remark", 

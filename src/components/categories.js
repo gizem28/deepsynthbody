@@ -16,7 +16,9 @@ const useGetCategories = () => {
         nodes {
           frontmatter {
             categories
+            slug
           }
+          id
         }
       }
     }
@@ -26,7 +28,7 @@ const useGetCategories = () => {
 
 export const CategoriesList = ({ data }) => {
   const { allMdx, frontmatter, categories, nodes } = useGetCategories();
-
+  console.log(allMdx?.nodes)
   return (
     <div className="container">
       <ul className={navLinks}>
@@ -36,7 +38,8 @@ export const CategoriesList = ({ data }) => {
             const { category, title, slug } = node.frontmatter;
             return(
                 <li key= {i} className={navLinkItem}>
-                <Link  className={navLinkText} to={`/categorypage/${node.frontmatter.slug}`}>{node.frontmatter.categories}</Link>
+                <Link  className={navLinkText} to={`/categorypage/${node.frontmatter.id}`}>
+                  {node.frontmatter.categories}</Link>
               </li>
             )
           })
