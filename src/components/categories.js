@@ -4,6 +4,7 @@ import {
     navLinks,
     navLinkItem,
     navLinkText,
+    linkItem,
   } from './layout.module.css'
 
 const useGetCategories = () => {
@@ -25,7 +26,7 @@ const useGetCategories = () => {
 
 export const CategoriesList = ({ data }) => {
   const { allMdx, frontmatter, categories, nodes } = useGetCategories();
-  console.log(allMdx?.nodes[0].frontmatter.slug)
+  // console.log(allMdx?.nodes[0].frontmatter.slug)
   return (
     <div className="container">
       <ul className={navLinks}>
@@ -34,8 +35,8 @@ export const CategoriesList = ({ data }) => {
             const { excerpt } = node;
             const { category, title, slug } = node.frontmatter;
             return(
-                <li key= {i} className={navLinkItem}>
-                <Link  className={navLinkText} to={`/categorypage/${node.frontmatter.slug}`}>
+                <li key= {i} className={linkItem}>
+                <Link  className={navLinkText} to={`blog/${node.frontmatter.slug}`}>
                   {node.frontmatter.categories}</Link>
               </li>
             )
