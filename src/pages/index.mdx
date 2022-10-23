@@ -3,6 +3,11 @@ title: "Home"
 slug: ""
 date: "2022-10-19"
 path: "/home"
+id: "456"
+hero_image: "./istockphoto-2.jpg"
+hero_image_alt: "Body dataset"
+hero_image_credit_text: "Christopher Ayme"
+hero_image_credit_link: "https://www.istockphoto.com/photo/artificial-man-interacting-social-networks-gm1162453929-318860789"
 ---
 
 import Layout from "../components/layout.js"
@@ -10,13 +15,22 @@ import Seo from '../components/seo'
 import {
   container,
 } from '../components/layout.module.css'
+import { CategoriesList } from "../components/categories";
 
-<Layout className={container} pageTitle="Home Page">
+
+<Layout className={container} pageTitle="Welcome to Deep">
 
 
-Content from Home Md page!
-- one
-- two
-- tre
+#### A novel framework to solve data deficiency problems caused by privacy issues and time-consuming and costly medical data annotation processes.
+
+
+ ![image](https://media.istockphoto.com/photos/artificial-man-interacting-social-networks-picture-id1162453929?k=20&m=1162453929&s=612x612&w=0&h=1AkKN30cBE8N1mvXrGeN-rnqc-wLvhe91jeT0zOdTC4=)
+
+
+Generative modles are organized under 11 categories.
+        
+
+<CategoriesList/>
 </Layout>
 export const Head = () => <Seo title="Home" />
+

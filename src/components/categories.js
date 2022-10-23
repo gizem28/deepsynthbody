@@ -1,12 +1,9 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import {
-    container,
-    heading,
     navLinks,
     navLinkItem,
     navLinkText,
-    siteTitle,
   } from './layout.module.css'
 
 const useGetCategories = () => {

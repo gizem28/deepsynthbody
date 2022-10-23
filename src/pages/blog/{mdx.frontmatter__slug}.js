@@ -6,21 +6,22 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 
 const BlogPost = ({data, children}) => {
-  const image = getImage(data.mdx.frontmatter.hero_image)
- console.log("post", children);
+  // const image = getImage(data?.mdx.frontmatter.hero_image)
+ console.log("query", data);
+//  console.log("post", children);
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
-            <p>Category: {data.mdx.frontmatter.categories}</p>
-      <p>Posted: {data.mdx.frontmatter.date}</p>
-      <GatsbyImage
+    <Layout pageTitle={data?.mdx.frontmatter.title}>
+            <p>Category: {data?.mdx.frontmatter.categories}</p>
+      <p>Posted: {data?.mdx.frontmatter.date}</p>
+      {/* <GatsbyImage
         image={image}
-        alt={data.mdx.frontmatter.hero_image_alt}
-      />
+        alt={data?.mdx.frontmatter.hero_image_alt}
+      /> */}
          <p>
         Photo Credit:{" "}
-        <a href={data.mdx.frontmatter.hero_image_credit_link}>
-          {data.mdx.frontmatter.hero_image_credit_text}
+        <a href={data?.mdx.frontmatter.hero_image_credit_link}>
+          {data?.mdx.frontmatter.hero_image_credit_text}
         </a>
       </p>
       {children}
@@ -28,25 +29,66 @@ const BlogPost = ({data, children}) => {
   )
 }
 
+// export const query = graphql`
+//   query($id: String) {
+//     mdx(id: {eq: $id}) {
+//       frontmatter {
+//         title
+//         date(formatString: "MMMM DD, YYYY")
+//         hero_image_alt
+//         hero_image_credit_link
+//         hero_image_credit_text
+//         categories
+//         hero_image {
+//           childImageSharp {
+//             gatsbyImageData
+//           }
+//         } 
+//       }
+//     }
+//   }
+// `
+
 export const query = graphql`
-  query($id: String) {
-    mdx(id: {eq: $id}) {
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        hero_image_alt
-        hero_image_credit_link
-        hero_image_credit_text
-        categories
-        hero_image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        } 
+query ($id: String) {
+  mdx(id: {eq: $id}) {
+    frontmatter {
+      title
+      date(locale: "blog")
+      hero_image_alt
+      hero_image_credit_link
+      hero_image_credit_text
+      categories
+      hero_image {
+        childImageSharp {
+          gatsbyImageData
+        }
       }
     }
   }
+}
+
 `
+
+// query {
+//   allMdx(
+//     filter: {frontmatter: {slug: {nin: "", }}}
+//     sort: {fields: frontmatter___date, order: DESC}
+//   ) {
+//     nodes {
+//       frontmatter {
+//         date(formatString: "MMMM D, YYYY")
+//         title
+//         slug
+//         categories
+//       }
+//       id
+//       excerpt
+//     }
+//   }
+// }
+// `
+
 
 export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
 

@@ -34,11 +34,11 @@ const Layout = ({ pageTitle, children }) => {
               About
             </Link>
           </li>
-          <li className={navLinkItem}>
+          {/* <li className={navLinkItem}>
           <Link to="/categorypage" className={navLinkText}>
               Categories
              </Link> 
-          </li>
+          </li> */}
           <li className={navLinkItem}>
             <Link to="/blog" className={navLinkText}>
               Models

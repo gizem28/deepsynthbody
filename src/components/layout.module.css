@@ -10,7 +10,7 @@
   .nav-links {
     display: flex;
     list-style: none;
-    padding-left: 0;
+    margin-left: 4rem;
 
   }
   .nav-link-item {
@@ -40,5 +40,5 @@ p{
 hr{
   height: 2px;
   background-color: #0D96F2 !important;
-  max-width: 700px;
+  max-width: 680px;
 }
