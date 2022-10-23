@@ -1,17 +1,17 @@
 import * as React from 'react'
 import {Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../../components/layout'
+import Seo from '../../components/seo'
 import {
   container,
   navLinkText,
-} from '../components/layout.module.css'
-import Home from './home'
+} from '../../components/layout.module.css'
 
 
-const HomePage = ({ data }) => {
+
+const HomePage = () => {
   return (
-   <Home/>
+    <Layout className={container} pageTitle="Home Page"></Layout>
   )
 }
 

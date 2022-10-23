@@ -8,8 +8,8 @@ import {
 } from '../../components/layout.module.css'
 
 
-
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, children }) => {
+  console.log("blog", children);
   return (
     <Layout className={container} pageTitle="Data Models">
      {

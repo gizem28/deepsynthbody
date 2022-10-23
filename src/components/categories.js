@@ -28,17 +28,17 @@ const useGetCategories = () => {
 
 export const CategoriesList = ({ data }) => {
   const { allMdx, frontmatter, categories, nodes } = useGetCategories();
-  console.log(allMdx?.nodes)
+  console.log(allMdx?.nodes[0].frontmatter.slug)
   return (
     <div className="container">
       <ul className={navLinks}>
         {
-          allMdx.nodes?.map((node, i) => {
+          allMdx?.nodes.map((node, i) => {
             const { excerpt } = node;
             const { category, title, slug } = node.frontmatter;
             return(
                 <li key= {i} className={navLinkItem}>
-                <Link  className={navLinkText} to={`/categorypage/${node.frontmatter.id}`}>
+                <Link  className={navLinkText} to={`/categorypage/${node.frontmatter.slug}`}>
                   {node.frontmatter.categories}</Link>
               </li>
             )

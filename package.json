@@ -18,6 +18,7 @@
     "@mdx-js/react": "^2.1.5",
     "bootstrap": "^5.2.2",
     "gatsby": "^4.24.4",
+    "gatsby-plugin-excerpts": "^1.1.0",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-mdx": "^4.3.0",
     "gatsby-plugin-sharp": "^4.24.0",
