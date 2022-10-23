@@ -22,5 +22,12 @@ module.exports = {
         path: `${__dirname}/about/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `extra`,
+        path: `${__dirname}/extra/`,
+      },
+    },
   ],
 };

@@ -11,7 +11,7 @@ import {
 
 const HomePage = () => {
   return (
-    <Layout className={container} pageTitle="Home Page"></Layout>
+    <Layout className={container} pageTitle="Home Page">index.jsden geliyor</Layout>
   )
 }
 
